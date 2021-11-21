@@ -7,11 +7,6 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
-  parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
   rules: {
     'prettier/prettier': [
       'error',
@@ -28,15 +23,4 @@ module.exports = {
       },
     ],
   },
-  overrides: [
-    {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)',
-      ],
-      env: {
-        jest: true,
-      },
-    },
-  ],
 };
