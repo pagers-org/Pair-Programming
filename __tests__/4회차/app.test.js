@@ -1,4 +1,4 @@
-const { putComma } = require('../pairs/4회차/app.js');
+const { putComma } = require('../../pairs/4회차/app.js');
 
 // 관리의 용이성, 가독성
 
