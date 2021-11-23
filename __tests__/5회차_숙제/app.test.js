@@ -1,4 +1,7 @@
-const { LocalState, LocalStorageMock } = require('../../pairs/5회차/app.js');
+const {
+  LocalState,
+  LocalStorageMock,
+} = require('../../pairs/5회차_숙제/app.js');
 
 /**
  * @see https://stackoverflow.com/questions/32911630/how-do-i-deal-with-localstorage-in-jest-tests/69929124#69929124
