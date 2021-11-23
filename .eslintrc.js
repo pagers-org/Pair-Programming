@@ -5,6 +5,9 @@ module.exports = {
     jest: true,
     node: true, // 'module' is not defined. 에러가 발생하면 기입
   },
+  parserOptions: {
+    sourceType: 'module',
+  },
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
   rules: {
