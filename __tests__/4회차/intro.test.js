@@ -283,38 +283,38 @@
 /**************************************************************************** */
 // 마지막 테스트가 실패되었다면, 마지막만 한 번 더 실행하면 된다.
 // let num = 0;
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 //   num = 10;
 // });
 // // 이 코드는 실패, 이를 아래처럼 바꾼다.
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
 // // 이렇게! 이것만 테스트하고 나머지를 통과시킨다.
-// test.only('adds 1 + 2 to equal 3', () => { // 3
+// test.only('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 // });
 
 // // 그런데 문제 있는 것은 이 코드다.
-// test('adds 1 + 2 to equal 3', () => { // 3
+// test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 //   num = 10;
 // });
 // // 이렇게! 이것만 통과하고 나머지를 테스트한다.
-// test.skip('adds 1 + 2 to equal 3', () => { // 3
+// test.skip('adds 1 + 2 to equal 3', () => {
 //   expect(sum(num, 2)).toBe(2);
 //   num = 10;
 // });

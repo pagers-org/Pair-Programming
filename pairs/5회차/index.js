@@ -1,4 +1,13 @@
-import { postRequest, renderForm } from './src/index.js';
+import { login, renderForm } from './src/index.js';
+
+const $loading = document.querySelector('.loading');
+
+// 로딩 이미지 표시/숨기기
+const loading = () => {
+  // 있으면 없애고
+  // 없으면 추가하고
+  $loading.classList.toggle('hidden');
+};
 
 // 최초 실행
 let targetForm = renderForm('login');
@@ -17,7 +26,10 @@ document.querySelector('.container').addEventListener('click', async event => {
     const { value: userId } = document.getElementById(`${targetForm}-name`);
     const { value: password } = document.getElementById(`${targetForm}-pass`);
     const data = { userId, password };
-    console.log(await postRequest({ url: targetForm, data }));
+
+    loading();
+    console.log(await login(data, targetForm));
+    loading();
   }
   if (target.matches('p')) {
     targetForm = renderForm(target.dataset.component);
