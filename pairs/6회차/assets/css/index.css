@@ -1,0 +1,100 @@
+@import "./ui/modal.css";
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 300px;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    text-align: right;
+}
+
+.display-log {
+    height: 20%;
+    padding-top: 7.5px;
+    padding-right: 5px;
+}
+
+.display-log>span:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.display-log>span {
+    border: 1px solid black;
+    padding: 2px 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.display-input {
+    width: 100%;
+    height: 45%;
+    padding-top: 8px;
+    padding-right: 5px;
+    font-size: 32px;
+    border-bottom: 1px solid black;
+}
+
+.display-output {
+    width: 100%;
+    height: 35%;
+    padding-top: 4px;
+    padding-right: 5px;
+    font-size: 28px;
+    border: 1px solid black;
+}
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+}
+
+.keypad>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.keypad>div>div {
+    width: 25%;
+    padding: 16px;
+    border: 1px solid black;
+}
+
+.keypad>div>div:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
