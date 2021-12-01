@@ -101,3 +101,11 @@ p {
     color: white;
     transition: all 0.2s ease-in-out;
 }
+
+div {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}

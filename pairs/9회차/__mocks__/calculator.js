@@ -11,19 +11,17 @@ const Calculator = expr => {
       case '-':
         return left - (right || 0);
       case 'x':
-        parseRight = right === 0 ? 0 : right || 1;
-        return left * parseRight;
+        return left * (right || 1);
       case '/':
         parseRight = right === 0 ? 0 : right || 1;
         if (parseRight === 0) throw new Error('정의되지 않은 결과입니다.');
         return left / parseRight;
       case '%': {
-        parseRight = right === 0 ? 0 : right || 1;
-        if (parseRight === 0) throw new Error('정의되지 않은 결과입니다.');
-        if (left < 0 || parseRight < 0) throw new Error('정의되지 않은 결과입니다.');
-        if (`${left}`.includes('.') || `${parseRight}`.includes('.'))
+        if (right === 0) throw new Error('정의되지 않은 결과입니다.');
+        if (left < 0 || right < 0) throw new Error('정의되지 않은 결과입니다.');
+        if (`${left}`.includes('.') || `${right}`.includes('.'))
           throw new Error('정의되지 않은 결과입니다.');
-        return left % parseRight;
+        return left % (right || 1);
       }
     }
   };
@@ -51,5 +49,4 @@ const Calculator = expr => {
   return parse(expr);
 };
 
-// module.exports = Calculator;
-export default Calculator;
+module.exports = Calculator;

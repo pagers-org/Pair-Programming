@@ -1,4 +1,4 @@
-const Calculator = require('../src/components/Calculator.js');
+const Calculator = require('../__mocks__/calculator.js');
 
 // describe('연산', () => {
 //   describe('실제 숫자가 양수이고, 기호를 하나씩 사용한다.', () => {
@@ -95,7 +95,7 @@ const Calculator = require('../src/components/Calculator.js');
 //   });
 // });
 
-const { render, $ } = require('../__mocks__/render.js');
+const { clickHandler, $ } = require('../__mocks__/render.js');
 
 describe('입력', () => {
   beforeEach(() => {
@@ -199,23 +199,23 @@ describe('입력', () => {
 
   describe('백스페이스 버튼을 클릭한다.', () => {
     test('아무것도 없는 경우 아무것도 하지 않는다.', () => {
-      render('⬅');
+      clickHandler('⬅');
       expect($('.display-input').textContent).toBe('⬅');
     });
     test('마지막이 피연산자인 경우 뒤에서 한 자리를 지운다.', () => {
-      render('1234');
-      render('⬅');
+      clickHandler('1234');
+      clickHandler('⬅');
       expect($('.display-input').textContent).toBe('123');
     });
     test('마지막이 연산자인 경우 연산자를 지운다.', () => {
-      render('123+');
-      render('⬅');
+      clickHandler('123+');
+      clickHandler('⬅');
       expect($('.display-input').textContent).toBe('123');
     });
     test('결과가 존재하는 경우 결과를 지운다.', () => {
-      render('123+123');
-      render('=');
-      render('⬅');
+      clickHandler('123+123');
+      clickHandler('=');
+      clickHandler('⬅');
       expect($('.display-output').textContent && $('.display-input').textContent).toBe('');
     });
   });
