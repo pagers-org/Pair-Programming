@@ -1,3 +1,5 @@
+import { REGEXP_OPERATOR } from '../util/constants/index.js';
+
 const Calculator = expr => {
   const validate = value => {};
 
@@ -31,7 +33,7 @@ const Calculator = expr => {
   const parse = expr => {
     // 대괄호를 괄호로 감싸면 그룹핑이 된다.
     const OPERATORS = { x: 2, '/': 2, '%': 2, '+': 1, '-': 1 };
-    const expressions = expr.split(/(?<=\d)([+\-x/%])/gi);
+    const expressions = expr.split(REGEXP_OPERATOR);
     if (expressions.length <= 1) return '';
     while (expressions.length > 1) {
       let index = expressions.findIndex(item => OPERATORS[item] === 2);

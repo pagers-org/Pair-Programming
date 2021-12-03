@@ -140,8 +140,7 @@ describe('입력', () => {
   });
 
   describe('0 버튼을 클릭한다.', () => {
-    // pass
-    test.skip('앞자리고 0이라면 0이 지워지고 자연수가 입력된다.', () => {
+    test('앞자리고 0이라면 0이 지워지고 자연수가 입력된다.', () => {
       clickHandler('0');
       expect(true).toBe(true);
     });
