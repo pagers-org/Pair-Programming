@@ -34,7 +34,7 @@ const Calculator = expr => {
     // 대괄호를 괄호로 감싸면 그룹핑이 된다.
     const OPERATORS = { x: 2, '/': 2, '%': 2, '+': 1, '-': 1 };
     const expressions = expr.split(REGEXP_OPERATOR);
-    if (expressions.length <= 1) return '';
+    if (expressions.length <= 1) return expr;
     while (expressions.length > 1) {
       let index = expressions.findIndex(item => OPERATORS[item] === 2);
       if (index === -1) index = expressions.findIndex(item => OPERATORS[item] === 1);

@@ -111,6 +111,7 @@ const clickHandler = ({ target }) => {
 
   inputRender(input, $input);
   if (OPERATORS_SET.has(keyword)) outputRender(output ?? input, $output);
+  if (keyword === '=') outputRender(output, $output);
 
   $input.scrollLeft = 10000;
 };
@@ -126,6 +127,7 @@ const features = (key, input, { innerText: output }) => {
       [inputText, outputText] = backSpace(input, output);
       break;
     case '=':
+      [inputText, outputText] = [EMPTY, input];
       break;
     case '+/-':
       [inputText, outputText] = signed(input);
@@ -144,7 +146,8 @@ const features = (key, input, { innerText: output }) => {
       [inputText, outputText] = [`${digits(input)}${key}`, null];
   }
 
-  return [putComma(inputText), outputText];
+  // return [putComma(inputText), outputText];
+  return [inputText, outputText];
 };
 
 const $keypad = $('.keypad');
