@@ -8,7 +8,10 @@ export const $ = selector => document.querySelector(selector);
  * @param {*} regExp
  * @returns
  */
-export const filteredOperands = input => input.split(REGEXP_OPERATOR);
+export const filteredOperands = input => {
+    const inputStr = typeof (input) !== 'string' ? `${input}` : input;
+    return inputStr.split(REGEXP_OPERATOR);
+};
 
 export const removeComma = target => target.replace(/[,]/gi, EMPTY);
 
