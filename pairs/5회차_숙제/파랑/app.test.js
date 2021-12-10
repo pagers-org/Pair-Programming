@@ -1,7 +1,4 @@
-const {
-  LocalState,
-  LocalStorageMock,
-} = require('../../pairs/5회차_숙제/app.js');
+const { LocalState, LocalStorageMock } = require('./app.js');
 
 /**
  * @see https://stackoverflow.com/questions/32911630/how-do-i-deal-with-localstorage-in-jest-tests/69929124#69929124
@@ -123,9 +120,7 @@ describe('updateItem', () => {
     expect(() => localState.updateItem('items4', 'FE', 'DevOps')).toThrow();
   });
   test('수정하려는 키가 있으나 아이템이 없다면 undefined를 반환한다.', () => {
-    expect(
-      localState.updateItem('items', 'Banana', 'Strawberry'),
-    ).toStrictEqual(undefined);
+    expect(localState.updateItem('items', 'Banana', 'Strawberry')).toStrictEqual(undefined);
   });
 });
 
