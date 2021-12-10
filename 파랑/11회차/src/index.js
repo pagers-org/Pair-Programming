@@ -127,7 +127,7 @@ const features = (key, input, { innerText: output }) => {
       [inputText, outputText] = backSpace(input, output);
       break;
     case '=':
-      [inputText, outputText] = [EMPTY, input];
+      [inputText, outputText] = input === '' ? [EMPTY, output] : [EMPTY, input];
       break;
     case '+/-':
       [inputText, outputText] = signed(input);
