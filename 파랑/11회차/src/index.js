@@ -106,7 +106,7 @@ const clickHandler = ({ target }) => {
   const $output = $('.display-output');
 
   if ($input.textContent.length >= LIMIT_DISPLAY_LENGTH) return;
-
+if ($input.textContent === '' && keyword === '=') return;
   const [input, output] = features(keyword, removeComma($input.textContent), $output);
 
   inputRender(input, $input);
