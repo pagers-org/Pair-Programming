@@ -13,7 +13,10 @@ export const filteredOperands = input => {
     return inputStr.split(REGEXP_OPERATOR);
 };
 
-export const removeComma = target => target.replace(/[,]/gi, EMPTY);
+export const removeComma = target => {
+    const targetStr = typeof (target) !== 'string' ? `${target}` : target;
+    return targetStr.replace(/[,]/gi, EMPTY);
+};
 
 /**
  *
