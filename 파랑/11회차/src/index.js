@@ -111,7 +111,8 @@ if ($input.textContent === '' && keyword === '=') return;
 
   inputRender(input, $input);
   if (OPERATORS_SET.has(keyword)) outputRender(output ?? input, $output);
-  if (keyword === '=') outputRender(output, $output);
+  else if (keyword === '=') outputRender(output, $output);
+  else outputRender(input, $output);
 
   $input.scrollLeft = 10000;
 };
