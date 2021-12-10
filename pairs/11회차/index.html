@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <!-- 외부 레이아웃 -->
+  <div id="root">
+    <!-- 입/출력 -->
+    <div class="display">
+      <!-- 히스토리 -->
+      <div class="display-log">
+        <span>Log</span>
+      </div>
+      <!-- 입력창 -->
+      <div class="display-input"></div>
+      <!-- 임시결과창 -->
+      <div class="display-output"></div>
+    </div>
+    <!-- 키패드 -->
+    <div class='keypad'>
+      <!--  -->
+      <div>
+        <div data-digit>C</div>
+        <div data-digit>⬅</div>
+        <div data-digit>%</div>
+        <div data-digit>/</div>
+      </div>
+      <!--  -->
+      <div>
+        <div data-digit>7</div>
+        <div data-digit>8</div>
+        <div data-digit>9</div>
+        <div data-digit>x</div>
+      </div>
+      <!--  -->
+      <div>
+        <div data-digit>4</div>
+        <div data-digit>5</div>
+        <div data-digit>6</div>
+        <div data-digit>-</div>
+      </div>
+      <!--  -->
+      <div>
+        <div data-digit>1</div>
+        <div data-digit>2</div>
+        <div data-digit>3</div>
+        <div data-digit>+</div>
+      </div>
+      <!--  -->
+      <div>
+        <div data-digit>+/-</div>
+        <div data-digit>0</div>
+        <div data-digit>.</div>
+        <div data-digit id="operator-equal">=</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal hidden">
+    <div class="modal-container">
+      <ul class="modal-log"></ul>
+    </div>
+  </div>
+  <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
