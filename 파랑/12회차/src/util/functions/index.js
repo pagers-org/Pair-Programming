@@ -3,6 +3,18 @@ import { EMPTY, REGEXP_OPERATOR } from '../constants/index.js';
 export const $ = (selector, target = document) => target.querySelector(selector);
 
 /**
+ * 현재 부모의 자식 선택자(형제)
+ *
+ * @param {Element} $element
+ * @param {String} parent
+ * @param {String} targetSelector
+ * @returns
+ */
+export const $sibling = ($element, parent, targetSelector) => {
+  return $(targetSelector, $element.closest(parent));
+};
+
+/**
  *
  * @param {*} input
  * @param {*} regExp
@@ -39,7 +51,13 @@ export const putComma = target => {
  * @param {*} value
  * @returns
  */
+export const isNull = value => value === null || value === undefined;
 
+/**
+ *
+ * @param {*} value
+ * @returns
+ */
 export const isEmpty = value => value === EMPTY;
 
 /**
