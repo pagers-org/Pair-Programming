@@ -1,0 +1,37 @@
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(135, 207, 235, 0.801);
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal-container {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.modal-log-list {
+    padding: 5px 200px;
+    border-bottom: 1px solid #EEE;
+    text-align: center;
+}
+
+.modal-log-list>p:first-child {
+    font-size: 18px;
+    color: #3e3e3e;
+}
+
+.modal-log-list>p:last-child {
+    font-size: 22px;
+    font-weight: bold;
+}
