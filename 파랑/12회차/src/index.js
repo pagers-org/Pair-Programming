@@ -11,7 +11,6 @@ import {
 } from './util/constants/index.js';
 import {
   $,
-  $sibling,
   filteredOperands,
   isEmptyReturn,
   isNull,
@@ -112,7 +111,7 @@ const displayRender = ({ input, $input }, { output, $output }) => {
   $output.innerText = output;
 };
 
-const clickHandler = ({ target }) => {
+export const clickHandler = ({ target }) => {
   if (!target.matches('div[data-digit]')) return;
   // 현재 입력된 값
   const keyword = target.innerText;
@@ -197,6 +196,8 @@ const modalClickHandler = ({ target }) => {
   modalToggle();
 };
 
-$keypad.addEventListener('click', clickHandler);
-$logButton.addEventListener('click', modalToggle);
-$modal.addEventListener('click', modalClickHandler);
+document.addEventListener('DOMContentLoaded', () => {
+  $keypad.addEventListener('click', clickHandler);
+  $logButton.addEventListener('click', modalToggle);
+  $modal.addEventListener('click', modalClickHandler);
+});

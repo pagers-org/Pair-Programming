@@ -40,7 +40,7 @@ export const putComma = target => {
     .map(item => {
       if (item === EMPTY) return item;
       const num = +item;
-      if (isNaN(num)) return item;
+      if (isNaN(num) || item.includes('.')) return item;
       return num.toLocaleString('ko-kr');
     })
     .join('');
