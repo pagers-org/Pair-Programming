@@ -13,6 +13,7 @@ import {
   $,
   filteredOperands,
   isEmptyReturn,
+  isNull,
   putComma,
   removeComma,
 } from './util/functions/index.js';
@@ -110,7 +111,7 @@ const displayRender = ({ input, $input }, { output, $output }) => {
   $output.innerText = output;
 };
 
-const clickHandler = ({ target }) => {
+export const clickHandler = ({ target }) => {
   if (!target.matches('div[data-digit]')) return;
   // 현재 입력된 값
   const keyword = target.innerText;
@@ -170,21 +171,33 @@ const features = (key, input, { innerText: output }) => {
 };
 
 const $keypad = $('.keypad');
-$keypad.addEventListener('click', clickHandler);
-
 const $modal = $('.modal');
 const $logButton = $('.display-log');
-$logButton.addEventListener('click', () => {
-  $modal.classList.toggle('hidden');
-});
-$modal.addEventListener('click', ({ target }) => {
-  if (target.matches('ul li')) modalClickHandler(target);
-  $modal.classList.toggle('hidden');
-});
 
-const modalClickHandler = target => {
-  const { textContent: input } = $('.modal-log-input-list', target);
-  const { textContent: output } = $('.modal-log-output-list', target);
+const modalToggle = () => $modal.classList.toggle('hidden');
 
-  displayRender({ input, $input: $('.display-input') }, { output, $output: $('.display-output') });
+const modalClickHandler = ({ target }) => {
+  const $li = target.closest('li');
+
+  if (isNull($li)) return modalToggle();
+
+  const { textContent: input } = $('.modal-log-input-list', $li);
+  const { textContent: output } = $('.modal-log-output-list', $li);
+
+  if (target.matches('.modal-data-delete>span'))
+    return Modal(input, output, $li.getAttribute('key'));
+
+  if (target.matches('.modal-data-check>span'))
+    displayRender(
+      { input, $input: $('.display-input') },
+      { output, $output: $('.display-output') },
+    );
+
+  modalToggle();
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  $keypad.addEventListener('click', clickHandler);
+  $logButton.addEventListener('click', modalToggle);
+  $modal.addEventListener('click', modalClickHandler);
+});
