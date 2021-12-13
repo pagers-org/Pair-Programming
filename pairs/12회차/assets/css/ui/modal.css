@@ -1,0 +1,73 @@
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(135, 207, 235, 0.801);
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal-container {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.modal-log-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 50px;
+    border-bottom: 1px solid #EEE;
+    text-align: center;
+}
+
+.modal-log-list span {
+    border-radius: 20px;
+    background-color: rgba(0, 40, 56, 0.501);
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.modal-log-list span:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgba(0, 183, 255, 0.301);
+}
+
+.modal-data-check, .modal-data-delete {
+    width: 100px;
+}
+
+.modal-data-check input {
+    padding: 10px;
+}
+
+.modal-data-list {
+    width: 500px;
+    margin: 0 20px;
+}
+
+.modal-data-list>p:first-child {
+    font-size: 18px;
+    color: #3e3e3e;
+    overflow-x: auto;
+}
+
+.modal-data-list>p:last-child {
+    font-size: 22px;
+    font-weight: bold;
+    overflow-x: auto;
+    padding: 0 5px;
+}
