@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">⏳ Pair-programming Timer</h1>
+    </header>
+    <main>
+        <section class="timer-wrap">
+            <div class="timer">05:00</div>
+            <div class="timer-buttons">
+                <button class="button">Swap</button>
+                <button class="button">Clear</button>
+                <button class="button">Play</button>
+            </div>
+        </section>
+        <section class="progressbar-wrap">
+            <div class="roles">
+                <div class="driver">
+                    <span class="driver-name">파랑</span>
+                    <span class="driver-icon">🚗</span>
+                </div>
+                <div class="navigator">
+                    <span class="navigator-name">아벤</span>
+                    <span class="navigator-icon">😎</span>
+                </div>
+            </div>
+            <div class="progressbar"></div>
+        </section>
+        <section class="input-wrap">
+            <form>
+                <input class="input" type="text" placeholder="Input users">
+                <input class="submit button" type="submit" value="Enter">
+            </form>
+            <ul class="users">
+                <li class="user">
+                    <span class="user-name">파랑</span>
+                    <button class="button button-user-delete">❌</button>
+                </li>
+                <li class="user">
+                    <span class="user-name">아벤</span>
+                    <button class="button button-user-delete">❌</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

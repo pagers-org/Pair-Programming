@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'DS-DIGII';
+    src: url('./assets/fonts/DS-DIGII.TTF');
+  }
+  
+
+:root {
+    --color-main: steelblue;
+    --color-driver: coral;
+    --color-navigator: gold;
+    --color-input: cornflowerblue;
+    --color-input-focus: darkslateblue;
+    --color-light-grey: #3e3e3e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.button {
+    border: none;
+    border-radius: 3em;
+    padding: 0.3em;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-main);
+}
+
+.button:focus {
+    outline: none;
+    background-color: var(--color-main);
+}
+
+/* Header */
+
+.title {
+    color: var(--color-main);
+}
+
+/* Timer */
+
+.timer {
+    font-family: 'DS-DIGII', sans-serif;
+    font-size: 6em;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-buttons button {
+    width: 5em;
+}
+
+/* Progress bar */
+
+.progressbar-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+.progressbar {
+    width: 100%;
+    height: 5px;
+    border-radius: 3em;
+    background-color: var(--color-main);
+    margin: auto;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.driver {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+}
+
+.driver-name {
+    background-color: var(--color-driver);
+    border-radius: 1em;
+    padding: 0 0.3em;
+}
+
+.navigator {
+    display: flex;
+    flex-direction: column;
+    left: 2em;
+    position: relative;
+}
+
+.navigator-name {
+    background-color: var(--color-navigator);
+    border-radius: 1em;
+    padding: 0 0.3em;
+}
+
+/* Input */
+
+.input-wrap {
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.input {
+    width: 50%;
+    border-style: none;
+    border-bottom: var(--color-input) solid 3px;
+    padding-left: 0.3em;
+    font-size: 1.2em;
+    transition: all 300ms ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: var(--color-input-focus) solid 3px;
+}
+
+.submit {
+    font-size: 1.2em;
+    padding: 0.3 1em;
+}
+
+.users {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.user {
+    display: flex;
+    margin-bottom: 0.5em;
+    justify-content: space-between;
+    padding-left: 0.3em;
+}
+
+.user-name {
+    width: 100%;
+    border-bottom: var(--color-light-grey) solid 1px;
+    margin-right: 5px;
+}
