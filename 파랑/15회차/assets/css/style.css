@@ -1,3 +1,6 @@
+@import url('./ui/menu.css');
+@import url('./ui/modal.css');
+
 @font-face {
     font-family: 'DS-DIGII';
     src: url('../fonts/DS-DIGII.TTF');
@@ -25,7 +28,7 @@ html {
 body {
     width: 70vw;
     margin: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 ul {
@@ -46,13 +49,14 @@ li {
 }
 
 .button:hover {
-    background-color: var(--color-main);
-}
-
-.button:focus {
     outline: none;
     background-color: var(--color-main);
 }
+
+/* 
+.button:focus {
+    background-color: var(--color-main);
+} */
 
 /* Header */
 
@@ -63,6 +67,7 @@ li {
 /* Timer */
 
 .timer {
+    margin-top: 1em;
     font-family: 'DS-DIGII', sans-serif;
     font-size: 6em;
 }
@@ -84,7 +89,7 @@ li {
     width: 100%;
     max-width: 30em;
     margin: auto;
-    margin-top: 1.5em;
+    margin-top: 6em;
 }
 
 .progressbar {
@@ -115,7 +120,7 @@ li {
 .navigator {
     display: flex;
     flex-direction: column;
-    left: 2em;
+    left: 8.7%;
     position: relative;
 }
 
@@ -123,51 +128,4 @@ li {
     background-color: var(--color-navigator);
     border-radius: 1em;
     padding: 0 0.3em;
-}
-
-/* Input */
-
-.input-wrap {
-    width: 100%;
-    max-width: 30em;
-    margin: auto;
-    margin-top: 3em;
-}
-
-.input {
-    width: 50%;
-    border-style: none;
-    border-bottom: var(--color-input) solid 3px;
-    padding-left: 0.3em;
-    font-size: 1.2em;
-    transition: all 300ms ease-in-out;
-}
-
-.input:focus {
-    outline: none;
-    border-bottom: var(--color-input-focus) solid 3px;
-}
-
-.submit {
-    font-size: 1.2em;
-    padding: 0.3 1em;
-}
-
-.users {
-    max-width: 60%;
-    margin: auto;
-    margin-top: 1em;
-}
-
-.user {
-    display: flex;
-    margin-bottom: 0.5em;
-    justify-content: space-between;
-    padding-left: 0.3em;
-}
-
-.user-name {
-    width: 100%;
-    border-bottom: var(--color-light-grey) solid 1px;
-    margin-right: 5px;
 }
