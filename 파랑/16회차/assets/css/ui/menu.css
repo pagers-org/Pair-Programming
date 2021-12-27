@@ -1,0 +1,164 @@
+/*
+Copyright (c) 2021 by Mikael Ainalem (https://codepen.io/ainalem/pen/YoyZpq)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.pie {
+    -webkit-tap-highlight-color: transparent;
+    background: #000;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 400px;
+    left: -200px;
+    position: absolute;
+    top: -200px;
+    width: 400px;
+    transform: translateX(-200px) translateY(-200px);
+    transition: transform 300ms;
+}
+
+.pie-color:hover {
+    opacity: 0.85;
+}
+
+.pie-color:active {
+    opacity: 0.7;
+}
+
+.pie1 {
+    clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+    transition-delay: 30ms;
+}
+
+.pie2 {
+    clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+    transition-delay: 60ms;
+}
+
+.pie3 {
+    clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+    transition-delay: 90ms;
+}
+
+.pie-color {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.pie-color1 {
+    background: linear-gradient(135deg, #f12711, #f5af19);
+    clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+}
+
+.pie-color2 {
+    background: linear-gradient(135deg, #444, #7e84f9);
+    clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+}
+
+.pie-color3 {
+    background: linear-gradient(135deg, #444, #b7e13f);
+    clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+}
+
+.setting {
+    left: 216px;
+    position: absolute;
+    top: 300px;
+    width: 46px;
+}
+
+.dark-mode {
+    left: 288px;
+    position: absolute;
+    top: 258px;
+    width: 46px;
+}
+
+.reset-app {
+    left: 324px;
+    position: absolute;
+    top: 188px;
+    width: 46px;
+}
+
+.menu {
+    -webkit-tap-highlight-color: transparent;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 160px;
+    left: -90px;
+    position: absolute;
+    top: -90px;
+    width: 160px;
+}
+
+.hamburger {
+    cursor: pointer;
+    height: 46px;
+    left: 58%;
+    position: relative;
+    top: 58%;
+    width: 46px;
+}
+
+.body {
+    /* color: white; */
+    text-align: center;
+}
+
+.hamburger path {
+    transition: transform 300ms;
+}
+
+.hamburger path:nth-child(1) {
+    transform-origin: 25% 29%;
+}
+
+.hamburger path:nth-child(2) {
+    transform-origin: 50% 50%;
+}
+
+.hamburger path:nth-child(3) {
+    transform-origin: 75% 72%;
+}
+
+.hamburger path:nth-child(4) {
+    transform-origin: 75% 29%;
+}
+
+.hamburger path:nth-child(5) {
+    transform-origin: 25% 72%;
+}
+
+.active .pie {
+    transform: translateX(0) translateY(0);
+}
+
+.active .hamburger path:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.active .hamburger path:nth-child(2) {
+    transform: scaleX(0);
+}
+
+.active .hamburger path:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+.active .hamburger path:nth-child(4) {
+    transform: rotate(-45deg);
+}
+
+.active .hamburger path:nth-child(5) {
+    transform: rotate(-45deg);
+}
