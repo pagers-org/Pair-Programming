@@ -1,0 +1,12 @@
+:root {
+    --color-main: steelblue;
+    --color-driver: #ffdbcc;
+    --color-driver-focus: coral;
+    --color-navigator: #fff09e;
+    --color-navigator-focus: gold;
+    --color-input: cornflowerblue;
+    --color-input-focus: darkslateblue;
+    --color-light-grey: #aaa;
+    --color-offset: #19bcb1;
+    --color-offset-hover: #007fff;
+}
