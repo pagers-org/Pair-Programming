@@ -1,0 +1,21 @@
+## TODO
+### 공통
+- AWS 구축하고 공유하기
+
+### 계산기
+- 테스트코드 작성하고 github action 으로 ci/cd 배포해보기
+
+
+### 타이머
+- 사용자 입장에서 flow 정리
+- 프로그레스 바는 멤버가 없을 때 숨긴다.
+
+<br>
+
+## vue3 - vue unit test
+
+## CI/CD 우선 구축
+
+## cypress
+
+## timer 변경 input
