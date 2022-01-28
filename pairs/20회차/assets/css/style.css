@@ -1,0 +1,183 @@
+@import url('./common/index.css');
+@import url('./ui/menu.css');
+@import url('./ui/modal.css');
+
+@font-face {
+    font-family: 'DS-DIGII';
+    src: url('../fonts/DS-DIGII.TTF');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 70vw;
+    margin: auto;
+    /* text-align: center; */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.button {
+    border: none;
+    border-radius: 3em;
+    padding: 0.3em;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+    outline: none;
+    background-color: var(--color-main);
+}
+
+/* 
+.button:focus {
+    background-color: var(--color-main);
+} */
+
+/* Header */
+
+.title {
+    color: var(--color-main);
+}
+
+/* Timer */
+
+.timer {
+    margin-top: 1em;
+    font-family: 'DS-DIGII', sans-serif;
+    font-size: 6em;
+}
+
+#edit-timer {
+    font-family: 'DS-DIGII', sans-serif;
+    font-size: 6rem;
+    width: 3em;
+    height: 80px;
+    text-align: center;
+    color: whitesmoke;
+    border: 5px solid transparent;
+    border-radius: 3em;
+    background-image: linear-gradient(#444444, #444444), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    padding: 0;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-buttons button {
+    width: 5em;
+    margin: 0 10px;
+}
+
+/* Progress bar */
+
+.progressbar-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+    margin-top: 6em;
+}
+
+.progressbar {
+    width: 100%;
+    height: 5px;
+    border-radius: 3em;
+    background-color: var(--color-main);
+    margin: auto;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.validate-error {
+    opacity: 0;
+}
+
+.driver {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.driver-name {
+    background-color: var(--color-driver-focus);
+    border-radius: 1em;
+    padding: 0 0.3em;
+}
+
+.navigator {
+    display: flex;
+    flex-direction: column;
+    left: 8.7%;
+    position: relative;
+}
+
+.navigator-name {
+    background-color: var(--color-navigator-focus);
+    border-radius: 1em;
+    padding: 0 0.3em;
+}
+
+.save {
+    background-color: var(--color-input)
+}
+
+/* Management */
+
+.management-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+    margin-top: 6em;
+}
+
+.management-wrap button {
+    color: var(--color-offset);
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+.management-wrap button:hover {
+    border-color: var(--color-offset-hover);
+    color: #fff;
+    cursor: pointer;
+}
+
+.offset {
+    box-shadow: 0.3em 0.3em 0 0 var(--color-offset), inset 0.3em 0.3em 0 0 var(--color-offset);
+}
+
+.offset:hover, .offset:focus {
+    box-shadow: 0 0 0 0 var(--color-offset-hover), inset 6em 3.5em 0 0 var(--color-offset-hover);
+}
